@@ -1,0 +1,52 @@
+{
+  "name": "@arthurgeron/context-selector",
+  "version": "1.0.0",
+  "description": "React Context API Native Selector",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "repository": "https://github.com/arthurgeron/context-selector",
+  "author": "Arthur Geron <arthurgeron@hotmail.com>",
+  "license": "CC-BY-SA 4.0",
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\""
+  },
+  "lint-staged": {
+    "*.{ts,js,jsx,tsx}": [
+      "yarn lint"
+    ]
+  },
+  "devDependencies": {
+    "@arthurgeron/eslint-config": "^1.0.4",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-no-inline-styles": "^1.0.5",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-radar": "^0.2.1",
+    "eslint-plugin-react": "^7.26.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "4.4.3"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "files": [
+    "/lib"
+  ]
+}
