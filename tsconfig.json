@@ -15,7 +15,16 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
+    "paths": {
+      "@src/*": ["src/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@hooks": ["src/hooks"],
+      "@types/*": ["src/types/*"],
+      "@types": ["src/types"],
+      "@constants": ["src/constants"],
+    },
   },
   "include": ["src"],
   "exclude": ["node_modules", "lib"]
